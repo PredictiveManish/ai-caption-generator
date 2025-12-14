@@ -85,7 +85,7 @@ def transcribe_audio_whisper(audio_path):
         
         return result
     except Exception as e:
-        st.error(f"Error in transcription: {str(e)}")
+        st.error(f"Don't worry it's a simple Error in transcription: {str(e)}")
         return None
 
 def generate_srt_from_transcription(transcription):
@@ -102,7 +102,7 @@ def generate_srt_from_transcription(transcription):
             subtitles.append(subtitle)
         return srt.compose(subtitles)
     except Exception as e:
-        st.error(f"Error generating SRT: {str(e)}")
+        st.error(f"Don't worry it's a simple Error generating SRT: {str(e)}")
         return ""
 
 def burn_subtitles_onto_video(video_path, srt_content, output_path):
@@ -163,7 +163,7 @@ def burn_subtitles_onto_video(video_path, srt_content, output_path):
         
         return True
     except Exception as e:
-        st.error(f"Error burning subtitles: {str(e)}")
+        st.error(f"Don't worry it's a simple Error burning subtitles: {str(e)}")
         return False
 
 def get_file_download_link(file_path, file_name, label):
@@ -181,6 +181,7 @@ def main():
     with st.sidebar:
         st.markdown("### 📋 About")
         st.markdown("""
+        Just Enjoy the process.
         This tool automatically:
         1. Extracts audio from your video
         2. Transcribes speech using AI (OpenAI Whisper)
