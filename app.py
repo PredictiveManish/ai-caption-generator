@@ -67,27 +67,23 @@ def extract_audio_from_video(video_path, audio_output_path):
         return False
 
 def transcribe_audio_whisper(audio_path):
-    """Transcribe audio using OpenAI Whisper"""
+    """Transcribe audio using OpenAI Whisper with language detection"""
     try:
-        # Load Whisper model (base is fast and accurate)
         model = whisper.load_model("base")
         
-        # Load audio using whisper's built-in function with error handling
-        try:
-            # Try whisper's default loading
-            result = model.transcribe(audio_path, language="en")
-        except:
-            # Fallback using pydub
-            audio = AudioSegment.from_file(audio_path)
-            audio = audio.set_frame_rate(16000).set_channels(1)
-            audio_array = np.array(audio.get_array_of_samples(), dtype=np.float32) / 32768.0
-            result = model.transcribe(audio_array)
+        # Let Whisper automatically detect the language
+        result = model.transcribe(audio_path, task="transcribe")
+        
+        # The detected language is in the result dictionary
+        detected_lang = result.get("language", "unknown")
+        
+        # Show the detected language to the user
+        st.info(f"🌐 Detected Language: **{detected_lang}**")
         
         return result
     except Exception as e:
-        st.error(f"Don't worry it's a simple Error in transcription: {str(e)}")
+        st.error(f"Error in transcription: {str(e)}")
         return None
-
 def generate_srt_from_transcription(transcription):
     """Generate SRT subtitle file from transcription"""
     try:
