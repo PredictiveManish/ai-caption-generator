@@ -183,6 +183,7 @@ def main():
         2. Transcribes speech using AI (OpenAI Whisper)
         3. Generates subtitles in SRT format
         4. Burns subtitles onto your video
+        5. Get videos into 99 languages supported by OpenAI whisper.
         
         **Supported formats:** MP4, MOV, AVI, MKV
         **Max file size:** 200MB
@@ -202,6 +203,7 @@ def main():
         -   High accuracy
         -   Customizable subtitles
         -   Direct downloads
+        -   Support of 99 Languages
         """)
     
     # Main content area
