@@ -445,6 +445,7 @@ def main():
         </ul>
         </div>
         """, unsafe_allow_html=True)
+        st.footer("Built by Manish Tiwari")
 
 if __name__ == "__main__":
     main()
