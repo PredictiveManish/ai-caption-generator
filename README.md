@@ -94,5 +94,5 @@ streamlit run app.py
 
 ## 📌 Author
 
-Manish Tiwari
+Manish Tiwari (predictivemanish)
 (Built as part of learning AI & real-world applications)
