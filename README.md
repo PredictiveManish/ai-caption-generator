@@ -42,7 +42,9 @@ Built with **Streamlit**, **OpenAI Whisper**, and **MoviePy**.
 ## 📦 Installation
 
 ```bash
-pip install streamlit whisper moviepy srt pydub numpy
+pip install -r requirements.txt
+
+(Better is to create a virtual environment before this command either using venv or conda)
 ```
 
 ---
