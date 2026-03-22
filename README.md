@@ -1,6 +1,7 @@
 # 🎬 AI Video Caption Generator
 
 [Live Link](https://ai-caption-generation.streamlit.app/)
+
 A simple web app that automatically generates subtitles for videos using AI.
 
 Built with **Streamlit**, **OpenAI Whisper**, and **MoviePy**.
