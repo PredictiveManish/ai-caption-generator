@@ -489,7 +489,7 @@ def main():
         This tool uses OpenAI's Whisper AI to automatically generate and add captions to your videos.
         
         <br><br>
-        <strong style="color: #06b6d4;">How it works:</strong><br>
+        <strong style="color: #06b6d4;">Working:</strong><br>
         1. Extracts audio from your video<br>
         2. Transcribes speech to text<br>
         3. Creates timed subtitles<br>
